@@ -1,5 +1,6 @@
 *.duckdb
 __pychache__/
+
 outputs/
 queries.cpython-313.pyc
 validation.cpython-313.pyc

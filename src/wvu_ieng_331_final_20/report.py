@@ -37,14 +37,17 @@ def write_report_html(
     limit: int = 50,
 ) -> Path:
     """
-    Combines all three charts into a single self-contained HTML report
-    with descriptive text and saves it to outputs/report.html.
+    Creates three charts (two bar and one line) based on the
+    queries and data pulled from the olist data set. Also
+    contains the report that the charts will be inputed
+    into. Then outputs them as an html file so that it can
+    be viewed on any system.
 
     Args:
         df_payments : Polars DataFrame from get_payment_information()
         df_shipping : Polars DataFrame from get_price_shipping()
         df_cities   : Polars DataFrame from get_seller_consumer_location()
-        limit       : Number of top items to show per chart. (default: 50)
+        limit       : Number of top items to show per chart. (default: 500)
     """
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     logger.info("Building combined HTML report...")
@@ -275,5 +278,5 @@ def write_report_html(
 
     output_path = OUTPUT_DIR / "report.html"
     output_path.write_text(html_report, encoding="utf-8")
-    logger.info(f"Written: {output_path}  (self-contained HTML report)")
+    logger.info(f"Written: {output_path}  (HTML report)")
     return output_path

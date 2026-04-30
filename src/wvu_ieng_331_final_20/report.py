@@ -228,6 +228,11 @@ def write_report_html(
         at the payment infromation and the cost the is incured when shipping to
         different customers and the price of shipping each of the products offered.
     </p>
+        The data in this report is pulled form the Olist data base filtered through
+        an sql query that has variable inputs selected when the program is asked to
+        run. The data is then validated for row counts and non null items, after that
+       the data is then compiled into this report and charts, as well as a csv and parquet.
+    </p>
 
     <h2>1. Payment Types by Customer Count</h2>
     <p>
@@ -236,6 +241,7 @@ def write_report_html(
         The vast majority of our one time purchases fall with in the credit_card and
         the boleto payment types. While very few customers make a single installment
         payment with a debit_card.
+        The credit card is also how must multi installment payments are pay for.
     </p>
 
     <div id="chart1" class="chart-container"></div>
@@ -246,8 +252,10 @@ def write_report_html(
         ratio. This is a measure of how economical each product is to ship relative to
         its size and weight. Products with a high price-per-density are expensive
         to ship per unit of mass, while low values indicate efficient shipping.
-        These 50 products offered are very cheap to ship costing less than $1 to ship
+        These {limit} products offered are very cheap to ship costing less than $1 to ship
         based on weight.
+        many of the items that the company ships are less the one dollar which is good as that helps
+        to keep costs down.
     </p>
 
     <div id="chart2" class="chart-container"></div>

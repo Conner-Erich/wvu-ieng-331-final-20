@@ -164,13 +164,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--chart_limit",
         type=int,
-        default=50,
-        help="Number of products to show in the chart. (default: 50)",
+        default=500,
+        help="Number of products to show in the chart. (default: 500)",
     )
     parser.add_argument(
         "--payment_installment",
         type=int,
-        default=1,
+        default=2,
         help="Filter by number of payment installments. (default: 1)",
     )
     parser.add_argument(

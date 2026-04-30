@@ -55,3 +55,7 @@ The pipeline also shows the payment infromation to show what customer make one p
 ## Limitations & Caveats
 
 Pipeline can not handle a database that is not duckdb and can not handle files that are not written in sql as the code is written for those two specific file types. The code is limited to the argparse groupings so to refine the data anyway you wanted would require them to be rewritten with the wanted arguments.
+
+## Final Deliverable 
+The deliverable file is an html report so that it can be opened in any webbrowser, it was chosen as it can be opended on most systems. 
+Running the program creates a html report in the output folder. This report goes over the payment_types and the installments that are associated with each payment type. It is followed by a graph showing how econiomical it is to ship each of the products showing 500 of the offered products by the company. followed by products that are reordered in the dame city.

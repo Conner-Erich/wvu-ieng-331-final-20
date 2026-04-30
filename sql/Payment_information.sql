@@ -15,7 +15,7 @@ from
 order_payments as op
 join order_items as oi on op.order_id = oi.order_id
 join orders as o on oi.order_id = o.order_id
-where payment_installments = $1
+where payment_installments BETWEEN 1 and $1
 order by payment_type
 )
 select

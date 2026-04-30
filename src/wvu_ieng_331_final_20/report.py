@@ -228,6 +228,7 @@ def write_report_html(
         at the payment infromation and the cost the is incured when shipping to
         different customers and the price of shipping each of the products offered.
     </p>
+    <p>
         The data in this report is pulled form the Olist data base filtered through
         an sql query that has variable inputs selected when the program is asked to
         run. The data is then validated for row counts and non null items, after that
@@ -269,6 +270,14 @@ def write_report_html(
     </p>
 
     <div id="chart3" class="chart-container"></div>
+
+    <p>
+        This financial anaylsis finds that most of the cash flow from this company comes
+        from unique product shipping, with most of these products being afforable to ship as
+        their price to density ratio is ver low. The payment method for most of the customers
+        is stable and reliable as most of the customers pay in one time installments with the
+        second highest payment method being the boleto payment type.
+    </p>
 
     <hr style="margin-top: 60px; border: none; border-top: 1px solid #ccc;">
     <p style="font-size: 0.85em; color: #888; text-align: center;">
